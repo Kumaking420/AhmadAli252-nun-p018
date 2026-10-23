@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Task02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[10];
+        
+        for (int i = 0; i < 10; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        int max = arr[0];
+        int min = arr[0];
+        int maxIndex = 0;
+        int minIndex = 0;
+        
+        for (int i = 0; i < 10; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                maxIndex = i;
+            }
+            if (arr[i] < min) {
+                min = arr[i];
+                minIndex = i;
+            }
+        }
+        
+        System.out.println("Largest = " + max + " at index " + maxIndex);
+        System.out.println("Smallest = " + min + " at index " + minIndex);
+        
+        
+    }
+}
